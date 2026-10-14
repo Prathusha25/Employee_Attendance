@@ -1,0 +1,15 @@
+# secrets / local env
+.env
+.env.*
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+# assignment kit materials: keep local, do not publish
+PROBLEM_STATEMENT.docx
+openapi.yaml
+DATA_MODEL.md
+sample_data/
+sample_seed.py
