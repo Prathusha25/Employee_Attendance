@@ -1,4 +1,4 @@
-# DECISIONS.md  (about 150-200 words in total - plain language, your own words)
+# DECISIONS.md
 
 1. **Indexes.** `employees`: unique `emp_code` (identity, race-safe 409), `department+emp_code` (filtered list), `joined_on` and `department+joined_on` (headcount for summary and trend). `attendance_logs`: unique `emp_code+date` (one record per day, monthly, PATCH, lookups), `date desc+emp_code` (list sort, month ranges), `status+date+emp_code` (status filter), `emp_code+punch_in desc` (punch-out). I rejected a `late_minutes` index: the month range already narrows the leaderboard enough.
 
